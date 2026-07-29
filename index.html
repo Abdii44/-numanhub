@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NumanHub</title>
+
+<style>
+body{
+    background:#111;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    margin:0;
+    padding:20px;
+}
+
+h1{
+    color:#00ff88;
+}
+
+input{
+    width:90%;
+    max-width:400px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    margin:15px 0;
+    font-size:16px;
+}
+
+button{
+    background:#00c853;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    margin:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.card{
+    background:#222;
+    width:90%;
+    max-width:350px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+}
+
+.card h2{
+    margin:10px 0;
+}
+
+hr{
+    border:1px solid #333;
+    margin:20px 0;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🛒 NumanHub</h1>
+<p id="cartCount">🛒 Cart: 0 items</p>
+<input type="text" placeholder="🔍 Search products...">
+
+<h2>Categories</h2>
+
+<button>📱 Electronics</button>
+<button>👕 Clothing</button>
+<button>👟 Shoes</button>
+<button>🏠 Home</button>
+
+<hr>
+
+<div class="card">
+<h2>📱 iPhone</h2>
+<p>💰 50,000 ETB</p>
+<button class="buy-btn">🛒 Buy Now</button>
+</div>
+
+<div class="card">
+<h2>👕 T-Shirt</h2>
+<p>💰 1,000 ETB</p>
+<button class="buy-btn">🛒 Buy Now</button>
+</div>
+
+<script>
+let cart = 0;
+
+const buyButtons = document.querySelectorAll(".buy-btn");
+
+buyButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        cart++;
+        document.getElementById("cartCount").innerText =
+            "🛒 Cart: " + cart + " items";
+        alert("Product gara cart seene!");
+    });
+});
+</script>
+</body>
+</html>
+
